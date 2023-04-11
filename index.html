@@ -1,0 +1,49 @@
+
+<html >
+
+<head>
+   
+  <title>AI Baby Monitoring Web App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <script>
+  window.console = window.console || function(t) {};
+</script>
+</head>
+<body translate="no">
+  <h1>BABY- MONITOR</h1>
+  <h2>IF-A-PERSON-IS-NOT-DETECTED-ALARM-WILL-BE-PLAYED</h2>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  
+      <script id="rendered-js" >
+const target = window.document.getElementsByTagName('h1')[0];
+
+const flickerLetter = letter => `<span style="animation: text-flicker-in-glow ${Math.random() * 4}s linear both ">${letter}</span>`;
+const colorLetter = letter => `<span style="color: hsla(${Math.random() * 360}, 100%, 80%, 1);">${letter}</span>`;
+const flickerAndColorText = (text) =>
+text.
+split('').
+map(flickerLetter).
+map(colorLetter).
+join('');
+const neonGlory = target => target.innerHTML = flickerAndColorText(target.textContent);
+
+
+neonGlory(target);
+target.onclick = ({ target }) => neonGlory(target);
+//# sourceURL=pen.js
+    </script>
+<h3 id="status" >STATUS :</h3>    <h3 id="number_of_objects" >Baby </h3>
+<script src="main.js"></script>
+</body>
+
+</html>
